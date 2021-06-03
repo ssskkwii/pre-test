@@ -35,4 +35,86 @@ client.on('message', msg => {
     }
   })
 
-client.login('ODQzNTYzMjQ5NzI2MzkwMzIy.YKFrfw.S6V-Rc0vLIXv7pEMa7haa9U5HZI');
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing tar.xz') {
+      msg.reply('tar Jxvf folder name');
+    }
+  });
+  
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing tar.bz2') {
+      msg.reply('tar xvjf folder name');
+    }
+  });
+  
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing tar.gz') {
+      msg.reply('tar xvzf folder name');
+    }
+  });
+  
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing bz2') {
+      msg.reply('bunzip2 folder name');
+    }
+  });
+
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing rar') {
+      msg.reply('unrar x folder name');
+    }
+  });
+
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing gz') {
+      msg.reply('gunzip folder name');
+    }
+  });
+
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing tar') {
+      msg.reply('tar xvf folder name');
+    }
+  });
+
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing tbz2') {
+      msg.reply('tar xvjf folder name');
+    }
+  });
+
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing tgz') {
+      msg.reply('tar xvzf folder name');
+    }
+  });
+
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing zip') {
+      msg.reply('unrar folder name');
+    }
+  });
+
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing Z') {
+      msg.reply('uncompress folder name');
+    }
+  });
+
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing 7z') {
+      msg.reply('7z x folder name');
+    }
+  });
+
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'Invitation') {
+      msg.channel.send('discord bot invite link');
+    }
+  });
+  client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'Invitation') {
+      msg.author.send('discord bot invite link');
+    }
+  });
+  client.login('bot token');
