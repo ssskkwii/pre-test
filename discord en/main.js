@@ -10,12 +10,12 @@ client.on('ready', () => {
 });
 client.on('message', msg => {
   if (msg.content.toLocaleLowerCase() === 'hi') {
-    msg.reply('Hi!');
+    msg.reply('hi!');
   }
 });
 client.on('message', msg => {
     if (msg.content.toLocaleLowerCase() === 'hello') {
-      msg.reply('Hello!');
+      msg.reply('hello!');
     }
   });
   client.on('message', message => {
@@ -67,7 +67,7 @@ client.on('message', msg => {
   });
   client.on('message', msg => {
     if (msg.content.toLocaleLowerCase() === 'invite') {
-      msg.channel.send('https://discord.com/api/oauth2/authorize?client_id=850293578948411412&permissions=8&scope=bot');
+      msg.channel.send('https://discord.com/api/oauth2/authorize?client_id=843563249726390322&permissions=2048&scope=bot');
     }
   });
   client.on('message', message => {
@@ -125,4 +125,4 @@ client.on('message', msg => {
       msg.reply('`ban name , `kick name , installing ? , invite');
     }
   });
-  client.login('ODQzNTYzMjQ5NzI2MzkwMzIy.YKFrfw.q_TyaJFsgyFVX2Dj627Wo5EGEaE');
+  client.login('ODQzNTYzMjQ5NzI2MzkwMzIy.YKFrfw.dqLsjGvBQMlhtyGrbMGQ4Gbap7k');
