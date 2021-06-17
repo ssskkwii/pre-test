@@ -125,4 +125,4 @@ client.on('message', msg => {
       msg.reply('`ban name , `kick name , installing ? , invite');
     }
   });
-  client.login('ODQzNTYzMjQ5NzI2MzkwMzIy.YKFrfw.dqLsjGvBQMlhtyGrbMGQ4Gbap7k');
+  client.login('bot token');
