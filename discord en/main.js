@@ -8,113 +8,121 @@ var prefix = ayar.prefix;
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}`);
 });
-
 client.on('message', msg => {
   if (msg.content.toLocaleLowerCase() === 'hi') {
     msg.reply('Hi!');
   }
 });
-
 client.on('message', msg => {
     if (msg.content.toLocaleLowerCase() === 'hello') {
       msg.reply('Hello!');
     }
   });
-
   client.on('message', message => {
     if (message.content.toLocaleLowerCase() === prefix + 'avatar') {
       message.delete()
       message.channel.send(message.author.displayAvatarURL());
     }
   });
-  
   client.on('message', message => {
     if(message.content.toLocaleLowerCase() === 'what the fuck') {
       message.delete()
       message.reply('delete')
     }
-  })
-
+  });
   client.on('message', msg => {
-    if (msg.content.toLocaleLowerCase() === 'installing tar.xz') {
-      msg.reply('tar Jxvf folder name');
+    if (msg.content.toLocaleLowerCase() === 'installing tar') {
+      msg.reply('(tar.xz) tar Jxvf folder name , (tar.bz2) tar xvjf folder name , (tar.gz) tar xvzf folder name (tbz2) tar xvjf folder name (tgz) tar xvzf folder name ()');
     }
   });
-  
-  client.on('message', msg => {
-    if (msg.content.toLocaleLowerCase() === 'installing tar.bz2') {
-      msg.reply('tar xvjf folder name');
-    }
-  });
-  
-  client.on('message', msg => {
-    if (msg.content.toLocaleLowerCase() === 'installing tar.gz') {
-      msg.reply('tar xvzf folder name');
-    }
-  });
-  
   client.on('message', msg => {
     if (msg.content.toLocaleLowerCase() === 'installing bz2') {
       msg.reply('bunzip2 folder name');
     }
   });
-
   client.on('message', msg => {
     if (msg.content.toLocaleLowerCase() === 'installing rar') {
       msg.reply('unrar x folder name');
     }
   });
-
   client.on('message', msg => {
     if (msg.content.toLocaleLowerCase() === 'installing gz') {
       msg.reply('gunzip folder name');
     }
   });
-
-  client.on('message', msg => {
-    if (msg.content.toLocaleLowerCase() === 'installing tar') {
-      msg.reply('tar xvf folder name');
-    }
-  });
-
-  client.on('message', msg => {
-    if (msg.content.toLocaleLowerCase() === 'installing tbz2') {
-      msg.reply('tar xvjf folder name');
-    }
-  });
-
-  client.on('message', msg => {
-    if (msg.content.toLocaleLowerCase() === 'installing tgz') {
-      msg.reply('tar xvzf folder name');
-    }
-  });
-
   client.on('message', msg => {
     if (msg.content.toLocaleLowerCase() === 'installing zip') {
       msg.reply('unrar folder name');
     }
   });
-
   client.on('message', msg => {
     if (msg.content.toLocaleLowerCase() === 'installing Z') {
       msg.reply('uncompress folder name');
     }
   });
-
   client.on('message', msg => {
     if (msg.content.toLocaleLowerCase() === 'installing 7z') {
       msg.reply('7z x folder name');
     }
   });
-
   client.on('message', msg => {
-    if (msg.content.toLocaleLowerCase() === 'Invitation') {
-      msg.channel.send('discord bot invite link');
+    if (msg.content.toLocaleLowerCase() === 'invite') {
+      msg.channel.send('https://discord.com/api/oauth2/authorize?client_id=850293578948411412&permissions=8&scope=bot');
     }
   });
-  client.on('message', msg => {
-    if (msg.content.toLocaleLowerCase() === 'Invitation') {
-      msg.author.send('discord bot invite link');
+  client.on('message', message => {
+  if (!message.guild) return;
+  if (message.content.startsWith('`kick')) {
+    const user = message.mentions.users.first();
+    if (user) {
+      const member = message.guild.member(user);
+      if (member) {
+        member
+          .kick('Optional reason that will display in the audit logs')
+          .then(() => {
+            message.reply(`Successfully kicked ${user.tag}`);
+          })
+          .catch(err => {
+            message.reply('I was unable to kick the member');
+            console.error(err);
+          });
+      } else {
+        message.reply("That user isn't in this guild!");
+      }
+    } else {
+      message.reply("You didn't mention the user to kick!");
+    }
+  }
+});
+  client.on('message', message => {
+  if (!message.guild) return;
+  if (message.content.startsWith('`ban')) {
+    const user = message.mentions.users.first();
+    if (user) {
+      const member = message.guild.member(user);
+      if (member) {
+        member
+          .ban({
+            reason: 'They were bad!',
+          })
+          .then(() => {
+            message.reply(`Successfully banned ${user.tag}`);
+          })
+          .catch(err => {
+            message.reply('I was unable to ban the member');
+            console.error(err);
+          });
+      } else {
+        message.reply("That user isn't in this guild!");
+      }
+    } else {
+      message.reply("You didn't mention the user to ban!");
+    }
+  }
+});
+    client.on('message', msg => {
+    if (msg.content.toLocaleLowerCase() === 'installing tbz2') {
+      msg.reply('`ban name , `kick name , installing ? , invite');
     }
   });
-  client.login('bot token');
+  client.login('ODQzNTYzMjQ5NzI2MzkwMzIy.YKFrfw.q_TyaJFsgyFVX2Dj627Wo5EGEaE');
