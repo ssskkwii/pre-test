@@ -13,6 +13,13 @@ client.on('message', msg => {
     msg.reply('hi!');
   }
 });
+
+client.on('message', msg => {
+  if (msg.content.toLocaleLowerCase() === prefix + 'who encoder') {
+    msg.reply('ssscute#4465 , github: https://github.com/ssskkwii');
+  }
+});
+
 client.on('message', msg => {
     if (msg.content.toLocaleLowerCase() === 'hello') {
       msg.reply('hello!');
@@ -125,4 +132,4 @@ client.on('message', msg => {
       msg.reply('`ban name , `kick name , installing ? , invite');
     }
   });
-  client.login('ODQzNTYzMjQ5NzI2MzkwMzIy.YKFrfw.dqLsjGvBQMlhtyGrbMGQ4Gbap7k');
+  client.login('ODQzNTYzMjQ5NzI2MzkwMzIy.YKFrfw.qfte-eRxDp6shz7sBP7jPf9N8lQ');
